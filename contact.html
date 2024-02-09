@@ -1,13 +1,54 @@
-<?php
-include_once 'header.php'
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is IdeaJotter App developed by JayEmpire">
+    <meta name="author" content="JayEmpire">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image/LogoMakr-0cwNzS.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>IdeaJotter</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="navbar-container">
+            <div class="navbar">
+                <div class="logo logo-container">
+                    <a href="index.html">
+                        <img src="image/notejot logo.png">
+                    </a>
+                </div>
+                <nav>
+                    <ul id="menuBox">
+                        <div>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </div>
+                    </ul>
+                </nav>
+               
+                <div class="menu menu-close">
+                    <img id="menuIcon" src="image/menu-bar-black.png">
+                </div>
+                
+            </div>
+        </div>
+    
+    </div>
+
     <section class="contact">
         <div class="container">
             <h1>Contact Me </h1>
             <div class="row">
                 <div class="col-2">
-                   <form action="">
+                   <form action="https://api.web3forms.com/submit" method="POST" id="form" onsubmit="reloadForm()">
+
                    <div class="label-container-two">
+                    <input type="hidden" name="access_key" value="5c7fd0a9-1735-4d2a-8af8-724f4ce23686">
                         <div class="two-row">
                             <label for="fname">First name</label>
                             <input type="text" required id="fname">
@@ -61,8 +102,32 @@ include_once 'header.php'
             </div>
         </div>
     </section>
-    <?php
-    include_once 'footer.php'
-    ?>
+
+    <footer>
+        <div class="container">
+                    <p class="designer"> &copy Copyrighted 2023 <a href="#">JAY-EMPIRE</a> <i class="fa fa-heart"></i> All rights reserved </p>
+        </div>
+   </footer>
+
+   <script>
+    const menuBox = document.getElementById("menuBox");
+    const menuIcon = document.getElementById("menuIcon");
+
+    menuIcon.onclick = function(){
+        menuBox.classList.toggle("show-mobile-menu");
+        if(menuBox.classList.contains("show-mobile-menu")){
+            menuIcon.src = "image/menu-close-black.png"
+        }
+        else{
+            menuIcon.src = "image/menu-bar-black.png"
+        }
+    }
+
+    const formEl = document.getElementById("form");
+
+    function reloadForm() {
+        formEl.reset();
+    }
+</script>
 </body>
 </html>

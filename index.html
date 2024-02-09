@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ideasJotter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="navbar-container">
+            <div class="navbar">
+                <div class="logo logo-container">
+                    <a href="index.html">
+                        <img src="image/notejot logo.png">
+                    </a>
+                </div>
+                <nav>
+                    <ul id="menuBox">
+                        <div>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </div>
+                    </ul>
+                </nav>
+               
+                <div class="menu menu-close">
+                    <img id="menuIcon" src="image/menu-bar-black.png">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <section class="ideasJotter">
+        <div class="container">
+            <div class="ideasJotter-homepage">
+                <h1>Welcome to ideasjoter</h1>
+                <h2>Preserve Your Innovative Concepts for Future Exploration</h2>
+                <p>Jot down ideas you think is great</p>
+                <a class='btn' href='add.html'>Add Your Note</a>
+            </div> 
+            <div class="row">
+                <div class="col-2">
+                    <img src="image/notejot gif.gif">
+                </div>
+                <div class="col-2">
+                    <h1>Ideas Rule the World you know</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+<footer>
+        <div class="container">
+           <p class="designer"> &copy Copyrighted 2023 <a href="#J">JAY-EMPIRE</a> <i class="fa fa-heart"></i> All rights reserved </p>
+        </div>
+</footer>
+
+<!------------Js section----------->
+<script>
+    const menuBox = document.getElementById("menuBox");
+    const menuIcon = document.getElementById("menuIcon");
+
+    menuIcon.onclick = function(){
+        menuBox.classList.toggle("show-mobile-menu");
+        if(menuBox.classList.contains("show-mobile-menu")){
+            menuIcon.src = "image/menu-close-black.png"
+        }
+        else{
+            menuIcon.src = "image/menu-bar-black.png"
+        }
+    }
+</script>
+</body>
+</html>

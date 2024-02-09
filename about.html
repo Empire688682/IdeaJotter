@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is IdeaJotter App developed by JayEmpire">
+    <meta name="author" content="JayEmpire">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image/LogoMakr-0cwNzS.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>IdeaJotter</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="navbar-container">
+            <div class="navbar">
+                <div class="logo logo-container">
+                    <a href="index.html">
+                        <img src="image/notejot logo.png">
+                    </a>
+                </div>
+                <nav>
+                    <ul id="menuBox">
+                        <div>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </div>
+                    </ul>
+                </nav>
+               
+                <div class="menu menu-close">
+                    <img id="menuIcon" src="image/menu-bar-black.png">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <section class="about">
+        <div class="container">
+            <h1>About</h1>
+            <div class="row">
+                <div class="col-2">
+                    <p>Introducing IdeaJotter, my brainchild crafted with a passion for web development using HTML, CSS, JavaScript, and PHP. This platform is designed to be your effortless companion for capturing notes and exploring imaginative ideas.
+                        Beyond being a mere web application, IdeaJotter mirrors my dedication to providing an uncomplicated and user-friendly haven for your thoughts. The seamless integration of HTML, CSS, JavaScript, and PHP guarantees a smooth and responsive experience, allowing you to capture ideas on the go.
+                        Envision a polished interface and dynamic functionality – that's the essence of IdeaJotter. It's not about complex features; it's about enhancing your creative process. Whether you're a spontaneous idea generator or someone who craves meticulous organization, this platform celebrates the fusion of technology and creativity.</p>
+                </div>
+                <div class="col-2">
+                    <img src="image/notejot logo.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <footer>
+        <div class="container">
+                    <p class="designer"> &copy Copyrighted 2023 <a href="#">JAY-EMPIRE</a> <i class="fa fa-heart"></i> All rights reserved </p>
+        </div>
+   </footer>
+   <!----------js section--------->
+   <script src="https://unpkg.com/typed.js@2.0.16"></script>
+   <script>
+    const menuBox = document.getElementById("menuBox");
+    const menuIcon = document.getElementById("menuIcon");
+
+    menuIcon.onclick = function(){
+        menuBox.classList.toggle("show-mobile-menu");
+        if(menuBox.classList.contains("show-mobile-menu")){
+            menuIcon.src = "image/menu-close-black.png"
+        }
+        else{
+            menuIcon.src = "image/menu-bar-black.png"
+        }
+    }
+</script>
+</body>
+</html>
+
